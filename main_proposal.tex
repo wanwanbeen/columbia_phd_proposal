@@ -1,0 +1,78 @@
+\documentclass[11pt,notitlepage]{article}
+\usepackage{palatino} 
+\usepackage{graphicx} 
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{tocloft}
+\usepackage[compact]{titlesec}  
+\usepackage[labelfont=bf]{caption} 
+\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry} 
+
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{2}
+\titlespacing{\subsection}{0pt}{12pt}{9pt}
+\renewcommand*\familydefault{\sfdefault} 
+\renewcommand\contentsname{\LARGE{Table of Contents\\}}
+\renewcommand\cftsecafterpnum{\par\addvspace{12pt}}
+\renewcommand\cftsubsecafterpnum{\par\addvspace{6pt}}
+\renewcommand\cftsecfont{\large\bfseries}
+\renewcommand\cftsubsecfont{\large}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Title Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sec_0_titlepage.tex}
+\newpage	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Table of Contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Specific Aims
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Specific Aims}
+\input{sec_1_specificaims.tex}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Research Plan
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research Plan}
+\vspace{1cm}
+\section{\textbf{\textit{A. Significance}}}
+\vspace{1cm}
+\input{sec_A_significance.tex}
+\newpage
+%--------------------------------------------------------------------------
+\section{\textbf{\textit{B. Innovation}}}
+\vspace{1cm}
+\input{sec_B_innovation.tex}
+\newpage
+%--------------------------------------------------------------------------
+\section{\textbf{\textit{C. Approach}}}
+\vspace{1cm}
+\input{sec_C1_approach_data.tex}
+\newpage
+\input{sec_C2_approach_aim1.tex}
+\newpage
+\input{sec_C3_approach_aim2.tex}
+\newpage
+\input{sec_C4_approach_aim3.tex}
+\newpage
+\input{sec_C5_approach_timeline.tex}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Publications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{List of Publications}
+\input{sec_D_publications.tex}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{nihunsrt}
+\small{\bibliography{sec_E_bibliography}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
